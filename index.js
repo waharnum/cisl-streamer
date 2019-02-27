@@ -1,4 +1,6 @@
 const r2Streamer = require("r2-streamer-js/dist/es7-es2016/src");
+const express = require("express");
+const serveStatic = require("serve-static");
 
 async function serverStart () {
 
@@ -9,14 +11,77 @@ async function serverStart () {
       disableRemotePubUrl: false, // deactivates the HTTP route for loading a remote publication.
     });
 
+    const webpubs = serveStatic("webpubs", {
+        dotfiles: "ignore",
+        etag: true,
+        fallthrough: false,
+        immutable: true,
+        index: false,
+        maxAge: "1d",
+        redirect: false,
+        setHeaders: function(res, path) {
+            server.setResponseCORS(res);
+        }
+    });
+
+    server.expressUse("/webpub", webpubs);
+
+    server.expressGet(["/webpubindex.json"], function (req, res) {
+
+      // Optionally, to add permissive CORS headers to the HTTP response
+      server.setResponseCORS(res);
+
+      res.setHeader("Content-Type", "application/json");
+      
+      var index = {
+          "cast-lexington": {
+            id: "cast-lexington",
+            image: "etching_source.jpg",
+            alt: "Lines of British soldiers advance and shoot as American colonists run away",
+            title: "What Really Happened at the Battle of Lexington?",
+            type: "Documents"
+          },
+          "serp-children-protesting": {
+            id: "serp-children-protesting",
+            image: "childprotesting1.jpg",
+            alt: "Photo of a group of protesters, some of whom are children.",
+            title: "Children protesting: duty or danger?",
+            type: "Article"
+          },
+          "serp-eating-meat": {
+            id: "serp-eating-meat",
+            image: "meat2-pointnshoot-photography.jpg",
+            alt: "Photo of cheeseburger and fries",
+            title: "Should people continue to eat meat?",
+            type: "Article"
+        },
+          "serp-junk-food": {
+            id: "serp-junk-food",
+            image: "junkfood1.jpg",
+            alt: "Photo of gummy worms",
+            title: "Junk food: Should schools sell it?",
+            type: "Article"
+          },
+          "serp-paper-or-plastic": {
+             id: "serp-paper-or-plastic",
+             image: "plastic-bags-duncan-hull.jpg",
+             alt: "Photo of plastic bags in front of and on a fence",
+             title: "Should Our Use of Paper or Plastic Be an Individual Choice or Be Regulated By the Government?",
+             type: "Article"
+          }
+      };
+
+      res.status(200).send(JSON.stringify(index));
+    });
+
     // First parameter: port number, zero means default (3000),
     // unless specified via the environment variable `PORT` (process.env.PORT).
     // Tip: the NPM package `portfinder` can be used to automatically find an available port number.
     const url = await server.start(3000, false);
 
     const publicationURLs = server.addPublications(
-        [        
-        "pubs/pg1695.epub"
+        [
+        "ebooks/pg1695.epub"
         ]);
 
     console.log(publicationURLs);
