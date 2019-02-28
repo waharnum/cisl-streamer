@@ -36,7 +36,7 @@ async function serverStart () {
       var webpubDirectory = "webpub";
       var explodedPubDirectory = "pub";
 
-      var index = {
+      var textIndex = {
           "chesterton-thursday": {
               id: "ZWJvb2tzL3BnMTY5NS5lcHVi",
               image: "default.jpg",
@@ -87,7 +87,7 @@ async function serverStart () {
           }
       };
 
-      res.status(200).send(JSON.stringify(index));
+      res.status(200).send(JSON.stringify(textIndex));
     });
 
     // First parameter: port number, zero means default (3000),
