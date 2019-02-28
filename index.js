@@ -32,42 +32,58 @@ async function serverStart () {
       server.setResponseCORS(res);
 
       res.setHeader("Content-Type", "application/json");
-      
+
+      var webpubDirectory = "webpub";
+      var explodedPubDirectory = "pub";
+
       var index = {
+          "chesterton-thursday": {
+              id: "ZWJvb2tzL3BnMTY5NS5lcHVi",
+              image: "default.jpg",
+              alt: "",
+              title: "The Man Who Was Thursday",
+              type: "Ebook",
+              pubDirectory: explodedPubDirectory
+          },
           "cast-lexington": {
             id: "cast-lexington",
             image: "etching_source.jpg",
             alt: "Lines of British soldiers advance and shoot as American colonists run away",
             title: "What Really Happened at the Battle of Lexington?",
-            type: "Documents"
+            type: "Documents",
+            pubDirectory: webpubDirectory
           },
           "serp-children-protesting": {
             id: "serp-children-protesting",
             image: "childprotesting1.jpg",
             alt: "Photo of a group of protesters, some of whom are children.",
             title: "Children protesting: duty or danger?",
-            type: "Article"
+            type: "Article",
+            pubDirectory: webpubDirectory
           },
           "serp-eating-meat": {
             id: "serp-eating-meat",
             image: "meat2-pointnshoot-photography.jpg",
             alt: "Photo of cheeseburger and fries",
             title: "Should people continue to eat meat?",
-            type: "Article"
+            type: "Article",
+            pubDirectory: webpubDirectory
         },
           "serp-junk-food": {
             id: "serp-junk-food",
             image: "junkfood1.jpg",
             alt: "Photo of gummy worms",
             title: "Junk food: Should schools sell it?",
-            type: "Article"
+            type: "Article",
+            pubDirectory: webpubDirectory
           },
           "serp-paper-or-plastic": {
              id: "serp-paper-or-plastic",
              image: "plastic-bags-duncan-hull.jpg",
              alt: "Photo of plastic bags in front of and on a fence",
              title: "Should Our Use of Paper or Plastic Be an Individual Choice or Be Regulated By the Government?",
-             type: "Article"
+             type: "Article",
+             pubDirectory: webpubDirectory
           }
       };
 
