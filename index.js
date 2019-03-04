@@ -104,8 +104,9 @@ async function serverStart () {
     const url = await server.start(3000, false);
 
     const publicationURLs = server.addPublications(
-        [        
-        "epubs/serp-junk-food.epub"
+        [
+        "epubs/serp-junk-food.epub",
+        "epubs/serp-children-protesting.epub"
         ]);
 
     console.log(publicationURLs);

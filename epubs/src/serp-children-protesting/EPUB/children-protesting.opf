@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns#">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:identifier id="uid">www.cast.org.cisl-demo.serp-junk-food</dc:identifier>
+        <dc:title>Children protesting: duty or danger?</dc:title>
+        <dc:creator>Word Generation</dc:creator>
+        <dc:language>en-US</dc:language>
+        <dc:date>2019-01-19</dc:date>
+        <meta property="dcterms:modified">2019-03-04</meta>
+        <!-- rights expression for individual images -->
+        <!-- TODO: this needs working out, attribution is in HTML for now -->
+        <link rel="cc:license" refines="#cover" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <link rel="cc:attributionURL" refines="#cover" href="http://en.wikipedia.org/wiki/Simon_Fieldhouse" />
+    </metadata>
+    <manifest>
+        <item id="article" href="children-protesting.html" media-type="application/xhtml+xml" />
+        <item id="childprotesting1" href="images/childprotesting1.jpg" media-type="image/jpeg" properties="cover-image" />
+        <item id="glossary-defend" href="images/glossary/defend-1.jpg" media-type="image/jpeg" />
+        <item id="glossary-disperse" href="images/glossary/disperse-1.jpg" media-type="image/jpeg" />
+        <item id="glossary-segregation" href="images/glossary/segregration-1.jpg" media-type="image/jpeg" />
+        <item id="glossary" href="glossary.json" media-type="application/json" />
+    </manifest>
+    <spine>
+        <itemref idref="article" />
+    </spine>
+</package>
