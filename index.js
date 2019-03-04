@@ -108,6 +108,7 @@ async function serverStart () {
         "epubs/serp-junk-food.epub",
         "epubs/serp-children-protesting.epub",
         "epubs/serp-paper-or-plastic.epub",
+        "epubs/serp-eating-meat.epub",
         ]);
 
     console.log(publicationURLs);

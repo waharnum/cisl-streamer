@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns#">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-        <dc:identifier id="uid">www.cast.org.cisl-demo.serp-junk-food</dc:identifier>
+        <dc:identifier id="uid">www.cast.org.cisl-demo.serp-children-protesting</dc:identifier>
         <dc:title>Children protesting: duty or danger?</dc:title>
         <dc:description>Article</dc:description>
         <dc:creator>Word Generation</dc:creator>
