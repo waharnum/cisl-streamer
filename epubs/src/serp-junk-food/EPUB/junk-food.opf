@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns#">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:identifier id="uid">www.cast.org.cisl-demo.serp-junk-food</dc:identifier>
+        <dc:title>Junk Food</dc:title>
+        <dc:creator>Word Generation</dc:creator>
+        <dc:language>en-US</dc:language>
+        <dc:date>2019-01-09</dc:date>
+        <meta property="dcterms:modified">2019-01-09</meta>
+        <!-- rights expressions for the work as a whole -->
+        <dc:rights>This work is shared with the public using the Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) license.</dc:rights>
+        <link rel="cc:license" href="http://creativecommons.org/licenses/by-sa/3.0/"/>
+        <meta property="cc:attributionURL">http://code.google.com/p/epub-samples/</meta>
+        <!-- rights expression for the cover image -->
+        <link rel="cc:license" refines="#cover" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <link rel="cc:attributionURL" refines="#cover" href="http://en.wikipedia.org/wiki/Simon_Fieldhouse" />
+    </metadata>
+    <manifest>
+        <item id="article" href="junk-food.html" media-type="application/xhtml+xml" />
+        <item id="junkfood1" href="images/junkfood1.jpg" media-type="image/jpeg" />
+        <item id="junkfood2" href="images/junkfood2.jpg" media-type="image/jpeg" />
+        <item id="glossary-encourage" href="images/glossary/encourage1.jpg" media-type="image/jpeg" />
+        <item id="glossary-incorporate" href="images/glossary/incorporate1.jpg" media-type="image/jpeg" />
+        <item id="glossary-nutritious" href="images/glossary/nutritious1.jpg" media-type="image/jpeg" />
+        <item id="glossary" href="glossary.json" media-type="application/json" />
+    </manifest>
+    <spine>
+        <itemref idref="article" />
+    </spine>
+</package>

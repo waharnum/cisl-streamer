@@ -45,9 +45,17 @@ async function serverStart () {
               type: "Ebook",
               pubDirectory: explodedPubDirectory
           },
+          "serp-junk-food-epub": {
+              id: "ZXB1YnMvc2VycC1qdW5rLWZvb2QuZXB1Yg%3D%3D",
+              image: "EPUB/images/junkfood1.jpg",
+              alt: "Photo of gummy worms",
+              title: "Junk food: Should schools sell it?",
+              type: "Article",
+              pubDirectory: explodedPubDirectory
+          },
           "cast-lexington": {
             id: "cast-lexington",
-            image: "etching_source.jpg",
+            image: "images/etching_source.jpg",
             alt: "Lines of British soldiers advance and shoot as American colonists run away",
             title: "What Really Happened at the Battle of Lexington?",
             type: "Documents",
@@ -55,7 +63,7 @@ async function serverStart () {
           },
           "serp-children-protesting": {
             id: "serp-children-protesting",
-            image: "childprotesting1.jpg",
+            image: "images/childprotesting1.jpg",
             alt: "Photo of a group of protesters, some of whom are children.",
             title: "Children protesting: duty or danger?",
             type: "Article",
@@ -63,7 +71,7 @@ async function serverStart () {
           },
           "serp-eating-meat": {
             id: "serp-eating-meat",
-            image: "meat2-pointnshoot-photography.jpg",
+            image: "images/meat2-pointnshoot-photography.jpg",
             alt: "Photo of cheeseburger and fries",
             title: "Should people continue to eat meat?",
             type: "Article",
@@ -71,7 +79,7 @@ async function serverStart () {
         },
           "serp-junk-food": {
             id: "serp-junk-food",
-            image: "junkfood1.jpg",
+            image: "images/junkfood1.jpg",
             alt: "Photo of gummy worms",
             title: "Junk food: Should schools sell it?",
             type: "Article",
@@ -79,7 +87,7 @@ async function serverStart () {
           },
           "serp-paper-or-plastic": {
              id: "serp-paper-or-plastic",
-             image: "plastic-bags-duncan-hull.jpg",
+             image: "images/plastic-bags-duncan-hull.jpg",
              alt: "Photo of plastic bags in front of and on a fence",
              title: "Should Our Use of Paper or Plastic Be an Individual Choice or Be Regulated By the Government?",
              type: "Article",
@@ -96,11 +104,13 @@ async function serverStart () {
     const url = await server.start(3000, false);
 
     const publicationURLs = server.addPublications(
-        [
-        "ebooks/pg1695.epub"
+        [        
+        "epubs/serp-junk-food.epub"
         ]);
 
     console.log(publicationURLs);
+
+    const opds2 = server.publicationsOPDS();
 
     // Second constructor parameter: if true, HTTPS instead of HTTP, using a randomly-generated self-signed certificate.
     // Also validates encrypted HTTP header during request-request cycles, so should only be used in runtime
