@@ -8,7 +8,7 @@ It's extreme proof-of-concept stage right now.
 
 1. Use
 2. `npm install` for dependencies
-3. `node index.js` to run the server
-4. Run the CISL demo from the [streamer-experiment](https://github.com/cast-org/cisl-demo/tree/streamerExperiment) branch.
-5. The CISL demo will load its texts and library from this server.
-6. You can add additional texts to the (currently hand-rolled) `textIndex` variable in `index.js`; the sample ebook may not have a stable URL yet.
+3. `./create-epubs.sh` to generate sample epubs from the source files in `epubs/src`
+4. `node index.js` to run the server
+5. Run the CISL demo from the [streamer-experiment](https://github.com/cast-org/cisl-demo/tree/streamerExperiment) branch.
+6. The CISL demo will load its texts and library from this server.
