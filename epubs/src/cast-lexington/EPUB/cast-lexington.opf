@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en-US" prefix="cc: http://creativecommons.org/ns#">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-        <dc:identifier id="uid">www.cast.org.cisl-demo.cast-lexington.modern</dc:identifier>
-        <dc:title>What Really Happened at the Battle of Lexington? (modern)</dc:title>
+        <dc:identifier id="uid">www.cast.org.cisl-demo.cast-lexington.original</dc:identifier>
+        <dc:title>What Really Happened at the Battle of Lexington? (original)</dc:title>
         <dc:description>Documents</dc:description>
         <dc:creator>Word Generation</dc:creator>
         <dc:language>en-US</dc:language>
@@ -14,13 +14,16 @@
         <link rel="cc:attributionURL" refines="#cover" href="http://en.wikipedia.org/wiki/Simon_Fieldhouse" />
     </metadata>
     <manifest>
-        <item id="article" href="lexington-modern.html" media-type="application/xhtml+xml" />
+        <item id="article" href="lexington.html" media-type="application/xhtml+xml" />
 
         <item id="etching_source" href="images/etching_source.jpg" media-type="image/jpeg" properties="cover-image" />
 
         <item id="gazette_logo" href="images/gazette_logo.gif" media-type="image/gif" />
 
         <item id="salem_gazette_logo" href="images/salem_gazette_logo.gif" media-type="image/gif" />
+
+        <item id="parchment-1" href="images/parchment-1" media-type="image/png" />
+        <item id="parchment-2" href="images/parchment-2" media-type="image/png" />
 
         <item id="glossary" href="glossary.json" media-type="application/json" />
     </manifest>
