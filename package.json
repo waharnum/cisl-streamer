@@ -10,5 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "r2-streamer-js": "latest"
+  },
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-zip": "0.18.2"
   }
 }
