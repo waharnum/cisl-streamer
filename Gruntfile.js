@@ -8,6 +8,7 @@ module.exports = function (grunt) {
 
     "use strict";
 
+    // Dynamically generates a config for the grunt-zip task
     var baseEpubSourceDirectory = "epubs" + path.sep + "src";
     var baseEpubDirectory = "epubs";
     var epubSourceDirs = fs.readdirSync(baseEpubSourceDirectory);
@@ -30,5 +31,5 @@ module.exports = function (grunt) {
 
     // Custom tasks:
 
-    grunt.registerTask("default", ["zip"]);
+    grunt.registerTask("createEpubs", ["zip"]);
 };
